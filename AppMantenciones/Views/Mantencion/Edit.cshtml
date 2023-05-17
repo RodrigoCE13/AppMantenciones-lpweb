@@ -1,0 +1,25 @@
+﻿@model AppMantenciones.Models.Mantencion
+
+<h1>Editar Mantencion</h1>
+<div class="row text-white">
+    <form asp-action="Edit">
+        <label>Tipo de mantencion</label>
+        <select asp-for="IdTipoMantencion" class="form-select mb-3" asp-items="ViewBag.IdTipoMantencion"></select>
+
+        <label>Descripcion</label>
+        <input asp-for="Descripcion" class="form-control mb-3" required />
+
+        <label>Precio</label>
+        <input asp-for="Precio" class="form-control mb-3" required />
+
+        <label>Vehiculo</label>
+        <select asp-for="IdVehiculo" class="form-select mb-3" asp-items="ViewBag.IdVehiculo"></select>
+
+        <label>Taller/mecanico</label>
+        <select asp-for="IdTaller" class="form-select mb-3" asp-items="ViewBag.IdTaller"></select>
+        <div class="mt-3">
+            <input type="submit" value="Editar" class="btn btn-info" />
+            <a asp-action="Index" value="Crear" class="btn btn-dark">Ver tabla</a>
+        </div>
+    </form>
+</div>

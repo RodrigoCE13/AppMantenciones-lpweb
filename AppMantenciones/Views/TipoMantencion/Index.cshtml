@@ -1,0 +1,30 @@
+﻿@model IEnumerable<AppMantenciones.Models.TipoMantencion>
+
+<div class="text-end">
+    <a asp-action="Create" class="btn btn-info">Ingrear tipo mantencion</a>
+</div>
+<h2>Lista de tipos de mantencion</h2>
+
+<table class="table table-striped table-light text-center">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@item.Id</td>
+                <td>@item.Nombre</td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.Id" class="btn btn-success"><i class="fa-solid fa-pen-to-square"></i></a>
+                    <a asp-action="Delete" onclick="return confirmarEliminarTipo(@item.Id)" asp-route-id="@item.Id" class="btn btn-danger"><i class="fa-solid fa-trash"></i></a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
