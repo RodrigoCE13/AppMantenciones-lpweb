@@ -4,11 +4,11 @@
 <div class="row text-white">
     <form asp-action="Create">
         <label>Patente</label>
-        <input asp-for="Patente" class="form-control mb-3" required/>
+        <input asp-for="Patente" class="form-control mb-3" id="patente" required/>
         <label>Marca</label>
         <select asp-for="IdMarcaVehiculo" class="form-select mb-3" asp-items="ViewBag.IdMarcaVehiculo"></select>
         <label>Modelo</label>
-        <input asp-for="Modelo" class="form-control mb-3" required/>
+        <input asp-for="Modelo" class="form-control mb-3" id="modelo" required/>
         <label>Tipo</label>
         <select asp-for="Tipo" class="form-select mb-3">
             <option>auto</option>
@@ -16,9 +16,14 @@
             <option>bus</option>
             <option>furgon</option>
         </select>
-        <div class="mt-3">
-            <input type="submit" value="Crear" class="btn btn-info" />
-            <a asp-action="Index" value="Crear" class="btn btn-dark">Ver tabla</a>
+        <div class="row">
+            <div class="mt-3 col">
+                <input type="submit" value="Crear" class="btn btn-info" />
+                <input type="submit" value="Limpiar" class="btn btn-secondary" id="limpiarVehiculo" />
+            </div>
+            <div class="mt-3 text-end col">
+                <a asp-action="Index" value="Crear" class="btn btn-dark">Ver tabla</a>
+            </div>
         </div>
         @if (ViewBag.Alert != null)
         {

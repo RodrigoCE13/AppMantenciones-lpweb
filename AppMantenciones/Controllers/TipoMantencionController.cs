@@ -44,11 +44,10 @@ namespace AppMantenciones.Controllers
         [HttpPost]
         public IActionResult Edit(TipoMantencion tipoMantencion)
         {
-            
                 db.Update(tipoMantencion);
                 db.SaveChanges();
                 return RedirectToAction("Index");
-           
+
         }
         public IActionResult Delete(int? id)
         {

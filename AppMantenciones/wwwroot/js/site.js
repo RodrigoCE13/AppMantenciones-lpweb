@@ -105,3 +105,41 @@ function confirmarEliminarMantencion(id) {
 
     return false;
 }
+
+
+
+document.addEventListener('DOMContentLoaded', function () {
+    var limpiarBtn = document.getElementById('limpiarTaller');
+
+    limpiarBtn.addEventListener('click', function () {
+        var input1 = document.getElementById('nombre');
+        var input2 = document.getElementById('fono');
+        var input3 = document.getElementById('direccion');
+
+        input1.value = '';
+        input2.value = '';
+        input3.value = '';
+    });
+});
+document.addEventListener('DOMContentLoaded', function () {
+    var limpiarBtn = document.getElementById('limpiarVehiculo');
+
+    limpiarBtn.addEventListener('click', function () {
+        var input1 = document.getElementById('patente');
+        var input2 = document.getElementById('modelo');
+
+        input1.value = '';
+        input2.value = '';
+    });
+});
+document.addEventListener('DOMContentLoaded', function () {
+    var limpiarBtn = document.getElementById('limpiarMantencion');
+
+    limpiarBtn.addEventListener('click', function () {
+        var input1 = document.getElementById('descripcionM');
+        var input2 = document.getElementById('precio');
+
+        input1.value = '';
+        input2.value = '';
+    });
+});

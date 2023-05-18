@@ -51,9 +51,9 @@ namespace AppMantenciones.Controllers
         [HttpPost]
         public IActionResult Edit(Vehiculo vehiculo)
         {
-            db.Update(vehiculo);
-            db.SaveChanges();
-            return RedirectToAction("Index");
+                db.Update(vehiculo);
+                db.SaveChanges();
+                return RedirectToAction("Index");
         }
 
         //eliminar

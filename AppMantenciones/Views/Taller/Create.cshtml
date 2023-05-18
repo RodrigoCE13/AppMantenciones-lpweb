@@ -4,14 +4,19 @@
 <div class="text-white">
     <form asp-action="Create">
         <label class="form-label">Nombre</label>
-        <input class="form-control mb-3" type="text" asp-for="Nombre" required/>
+        <input class="form-control mb-3" type="text" asp-for="Nombre" id="nombre" required/>
         <label class="form-label">Fono</label>
-        <input class="form-control mb-3" type="text" asp-for="Fono" required/>
+        <input class="form-control mb-3" type="text" asp-for="Fono" id="fono" required/>
         <label class="form-label">Direccion</label>
-        <input class="form-control mb-3" type="text" asp-for="Direccion" />
-        <div class="mt-3">
-            <input type="submit" value="Crear" class="btn btn-info" />
-            <a asp-action="Index" value="Crear" class="btn btn-dark">Ver tabla</a>
+        <input class="form-control mb-3" type="text" asp-for="Direccion" id="dirreccion" />
+        <div class="row">
+            <div class="mt-3 col">
+                <input type="submit" value="Crear" class="btn btn-info" />
+                <input type="submit" value="Limpiar" class="btn btn-secondary" id="limpiarTaller" />
+            </div>
+            <div class="mt-3 text-end col">
+                <a asp-action="Index" value="Crear" class="btn btn-dark">Ver tabla</a>
+            </div>
         </div>
         @if (ViewBag.Alert != null)
         {

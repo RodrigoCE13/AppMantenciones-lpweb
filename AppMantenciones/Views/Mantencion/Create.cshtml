@@ -7,10 +7,10 @@
         <select asp-for="IdTipoMantencion" class="form-select mb-3" asp-items="ViewBag.IdTipoMantencion"></select>
 
         <label>Descripcion</label>
-        <input asp-for="Descripcion" class="form-control mb-3" required/>
+        <textarea asp-for="Descripcion" class="form-control mb-3" id="descripcionM" rows="3" required></textarea>
 
         <label>Precio</label>
-        <input asp-for="Precio" class="form-control mb-3" required/>
+        <input asp-for="Precio" class="form-control mb-3" id="precio" required/>
 
         <label>Vehiculo</label>
         <select asp-for="IdVehiculo" class="form-select mb-3" asp-items="ViewBag.IdVehiculo"></select>
@@ -18,10 +18,16 @@
         <label>Taller/mecanico</label>
         <select asp-for="IdTaller" class="form-select mb-3" asp-items="ViewBag.IdTaller"></select>
 
-        <div class="mt-3">
-            <input type="submit" value="Crear" class="btn btn-info" />
-            <a asp-action="Index" value="Crear" class="btn btn-dark">Ver tabla</a>
+        <div class="row">
+            <div class="mt-3 col">
+                <input type="submit" value="Crear" class="btn btn-info" />
+                <input type="submit" value="Limpiar" class="btn btn-secondary" id="limpiarMantencion" />
+            </div>
+            <div class="mt-3 text-end col">
+                <a asp-action="Index" value="Crear" class="btn btn-dark">Ver tabla</a>
+            </div>
         </div>
+
 
     </form>
 </div>
